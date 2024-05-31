@@ -32,6 +32,7 @@ A list of contributors (add yourself if you want to):
 - [cwhelchel](http://steamcommunity.com/id/cmw69krinkle)
 - [Lagg](http://lagg.me)
 - [BlueRaja](http://steamcommunity.com/id/BlueRaja/)
+- yavuzbeyy
 
 ## Wanna Contribute?
 Please read [CONTRIBUTING.md].
