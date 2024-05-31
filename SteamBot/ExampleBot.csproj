@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SteamBot</RootNamespace>
+    <AssemblyName>SteamBot</AssemblyName>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AssemblyTitle>SteamBot</AssemblyTitle>
+    <Description>SteamBot is a bot for the purpose of interacting with Steam Chat and Steam Trade.</Description>
+    <Product>SteamBot</Product>
+    <Copyright>%28C%29 2012 SteamBot Contributors</Copyright>
+    <AssemblyVersion>0.1.1.%2a</AssemblyVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <Externalconsole>True</Externalconsole>
+    <LangVersion>5</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\Bin\Release</OutputPath>
+    <Externalconsole>True</Externalconsole>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoDevelop.CSharpBinding, Version=2.6.0.0, Culture=neutral">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SteamTrade\SteamTrade.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="protobuf-net" Version="3.2.30" />
+    <PackageReference Include="SteamAuth" Version="3.0.0" />
+    <PackageReference Include="SteamKit2" Version="2.5.0" />
+    <PackageReference Include="System.Management" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SystemWebAdapters" Version="1.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="BotInfo.cs" />
+  </ItemGroup>
+</Project>
